@@ -64,11 +64,24 @@ int main(int argc, char** argv){
                         default:
                             console_color(7); // default white
                             break;
+                    } 
+                    for (char c : linea){
+                        if (std::tolower(c) == std::tolower(busqueda[0])){
+                            cout << linea.substr(pos, busqueda.length());
+                          console_color(7);
+                            cout << linea.substr(pos + busqueda.length()) << endl;
+                        }
                     }
-                    cout << linea.substr(pos, busqueda.length());
 
-                    console_color(7);
-                    cout << linea.substr(pos + busqueda.length()) << endl;
+
+
+
+
+
+                    //cout << linea.substr(pos, busqueda.length());
+
+                    //console_color(7);
+                    //cout << linea.substr(pos + busqueda.length()) << endl;
                     cont++;
                     //parrafos++;
                     //std::cout << linea << endl;
