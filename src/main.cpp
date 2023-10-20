@@ -34,7 +34,6 @@ int main(int argc, char** argv){
                     
                     cout << linea.substr(0, pos);
                                     
-                    //coincidencias = std::count(busqueda.begin(), busqueda.end(), linea);
                 if (pos != string::npos) {
                     switch (color_of_choice) {
                         case '1':
@@ -65,26 +64,11 @@ int main(int argc, char** argv){
                             console_color(7); // default white
                             break;
                     } 
-                    for (char c : linea){
-                        if (std::tolower(c) == std::tolower(busqueda[0])){
-                            cout << linea.substr(pos, busqueda.length());
-                          console_color(7);
-                            cout << linea.substr(pos + busqueda.length()) << endl;
-                        }
-                    }
-
-
-
-
-
-
-                    //cout << linea.substr(pos, busqueda.length());
-
-                    //console_color(7);
-                    //cout << linea.substr(pos + busqueda.length()) << endl;
+                   
+                    cout << linea.substr(pos, busqueda.length());
+                    console_color(7);
+                    cout << linea.substr(pos + busqueda.length()) << endl;                
                     cont++;
-                    //parrafos++;
-                    //std::cout << linea << endl;
                 }           
                 
             }
@@ -94,8 +78,6 @@ int main(int argc, char** argv){
     }else {
         cout << "No se encontraron coincidencias" << endl;
     }
-    
-
     infile.close();
 
 }
